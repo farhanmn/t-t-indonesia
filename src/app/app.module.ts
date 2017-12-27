@@ -10,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { NotifikasiPage } from '../pages/notifikasi/notifikasi';
+import { PercakapanPage } from '../pages/percakapan/percakapan';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NotifikasiPage } from '../pages/notifikasi/notifikasi';
     HomePage,
     ListPage,
     DashboardPage,
-    NotifikasiPage
+    NotifikasiPage,
+    PercakapanPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { NotifikasiPage } from '../pages/notifikasi/notifikasi';
     HomePage,
     ListPage,
     DashboardPage,
-    NotifikasiPage
+    NotifikasiPage,
+    PercakapanPage
   ],
   providers: [
     StatusBar,
