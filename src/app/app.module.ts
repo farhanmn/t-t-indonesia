@@ -11,6 +11,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { NotifikasiPage } from '../pages/notifikasi/notifikasi';
 import { PercakapanPage } from '../pages/percakapan/percakapan';
+import { DataCalonPage } from '../pages/data-calon/data-calon';
+import { TataCaraPage } from '../pages/tata-cara/tata-cara';
+import { FaqPage } from '../pages/faq/faq';
+import { PengaturanPage } from '../pages/pengaturan/pengaturan';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { PercakapanPage } from '../pages/percakapan/percakapan';
     ListPage,
     DashboardPage,
     NotifikasiPage,
-    PercakapanPage
+    PercakapanPage,
+    DataCalonPage,
+    TataCaraPage,
+    FaqPage,
+    PengaturanPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +40,11 @@ import { PercakapanPage } from '../pages/percakapan/percakapan';
     ListPage,
     DashboardPage,
     NotifikasiPage,
-    PercakapanPage
+    PercakapanPage,
+    DataCalonPage,
+    TataCaraPage,
+    FaqPage,
+    PengaturanPage
   ],
   providers: [
     StatusBar,

@@ -8,6 +8,11 @@ import { ListPage } from '../pages/list/list';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { NotifikasiPage } from '../pages/notifikasi/notifikasi';
 import { PercakapanPage } from '../pages/percakapan/percakapan';
+import { DatapribadiPage } from '../pages/datapribadi/datapribadi';
+import { DataCalonPage } from '../pages/data-calon/data-calon';
+import { TataCaraPage } from '../pages/tata-cara/tata-cara';
+import { FaqPage } from '../pages/faq/faq';
+import { PengaturanPage } from '../pages/pengaturan/pengaturan';
 
 @Component({
   templateUrl: 'app.html'
@@ -28,9 +33,15 @@ export class MyApp {
       { title: 'List', component: ListPage },
       { title: 'Dashboard', component: DashboardPage },
       { title: 'Notifikasi', component: NotifikasiPage},
-      { title: 'Percakapan', component: PercakapanPage}
+      { title: 'Percakapan', component: PercakapanPage},
+      { title: 'Data Pribadi', component: DatapribadiPage},
+      { title: 'Data Calon', component: DataCalonPage},
+      { title: 'Tata Cara Ta`aruf', component: TataCaraPage},
+      {title: 'FAQ', component: FaqPage},
+      { title: 'Pengaturan', component: PengaturanPage}
     ];
 
+   
   }
 
   initializeApp() {
