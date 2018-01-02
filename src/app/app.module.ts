@@ -4,7 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+// import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -15,19 +15,23 @@ import { DataCalonPage } from '../pages/data-calon/data-calon';
 import { TataCaraPage } from '../pages/tata-cara/tata-cara';
 import { FaqPage } from '../pages/faq/faq';
 import { PengaturanPage } from '../pages/pengaturan/pengaturan';
+import { KritikSaranPage } from '../pages/kritik-saran/kritik-saran';
+import { DatapribadiPage } from '../pages/datapribadi/datapribadi';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
+    // ListPage,
     DashboardPage,
     NotifikasiPage,
     PercakapanPage,
     DataCalonPage,
     TataCaraPage,
+    DatapribadiPage,
     FaqPage,
-    PengaturanPage
+    PengaturanPage,
+    KritikSaranPage
   ],
   imports: [
     BrowserModule,
@@ -37,14 +41,16 @@ import { PengaturanPage } from '../pages/pengaturan/pengaturan';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
+    // ListPage,
     DashboardPage,
     NotifikasiPage,
     PercakapanPage,
     DataCalonPage,
+    DatapribadiPage,
     TataCaraPage,
     FaqPage,
-    PengaturanPage
+    PengaturanPage,
+    KritikSaranPage
   ],
   providers: [
     StatusBar,

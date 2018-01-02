@@ -4,7 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+// import { ListPage } from '../pages/list/list';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { NotifikasiPage } from '../pages/notifikasi/notifikasi';
 import { PercakapanPage } from '../pages/percakapan/percakapan';
@@ -13,6 +13,7 @@ import { DataCalonPage } from '../pages/data-calon/data-calon';
 import { TataCaraPage } from '../pages/tata-cara/tata-cara';
 import { FaqPage } from '../pages/faq/faq';
 import { PengaturanPage } from '../pages/pengaturan/pengaturan';
+import { KritikSaranPage } from '../pages/kritik-saran/kritik-saran';
 
 @Component({
   templateUrl: 'app.html'
@@ -29,16 +30,18 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
-      { title: 'Dashboard', component: DashboardPage },
-      { title: 'Notifikasi', component: NotifikasiPage},
+      { title: 'Assalamu`alaikum \n Titi', component: HomePage },
+      // { title: 'List', component: ListPage },      
       { title: 'Percakapan', component: PercakapanPage},
+      { title: 'Notifikasi', component: NotifikasiPage},
+      { title: 'Kritik & Saran', component: KritikSaranPage},
+      { title: 'Dashboard', component: DashboardPage },      
       { title: 'Data Pribadi', component: DatapribadiPage},
       { title: 'Data Calon', component: DataCalonPage},
       { title: 'Tata Cara Ta`aruf', component: TataCaraPage},
-      {title: 'FAQ', component: FaqPage},
+      { title: 'FAQ', component: FaqPage},
       { title: 'Pengaturan', component: PengaturanPage}
+      
     ];
 
    

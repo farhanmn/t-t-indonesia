@@ -14,6 +14,72 @@
 </ion-header>
 
 <ion-content padding>
+    <div padding>
+        <ion-segment [(ngModel)]="pet">
+          <ion-segment-button value="kittens">
+            Kittens
+          </ion-segment-button>
+          <ion-segment-button value="puppies">
+            Puppies
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+      
+      <div [ngSwitch]="pet">
+        <ion-list *ngSwitchCase="'puppies'">
+          <ion-item>
+            <ion-thumbnail item-start>
+              <img src="img/thumbnail-puppy-1.jpg">
+            </ion-thumbnail>
+            <h2>Grup</h2>
+          </ion-item>
+          <div class="container">
+              <p> <i class="icon ion-ios-email-outline"></i> Assalamu'alaikum</p>
+            </div>
+    
+            <div class="container darker">
+              <p>Wa'alaikumsalam</p>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <input type="text" placeholder="Type your message…" autofocus=""><button ><ion-icon name="send"></ion-icon></button>
+            <input type="hidden">
+    
+    
+          </div>
+        </ion-list>
+      
+        <ion-list *ngSwitchCase="'kittens'">
+          <ion-item>
+            <ion-thumbnail item-start>
+              <img src="img/thumbnail-kitten-1.jpg">
+            </ion-thumbnail>
+            <h2>Admin</h2>
+          </ion-item>
+          <div class="container">
+              <p> <i class="icon ion-ios-email-outline"></i> Assalamu'alaikum</p>
+            </div>
+    
+            <div class="container darker">
+              <p>Wa'alaikumsalam</p>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <input type="text" placeholder="Type your message…" autofocus=""><button ><ion-icon name="send"></ion-icon></button>
+            <input type="hidden">
+    
+    
+          </div>
+        </ion-list>
+      </div>
     <ion-item id="percakapanAdmin-list-item38">
         <b> <i class="icon ion-ios-email-outline"></i> Percakapan</b>
         <br>
@@ -39,23 +105,6 @@
 
 
 
-        <div class="container">
-          <p> <i class="icon ion-ios-email-outline"></i> Assalamu'alaikum</p>
-        </div>
-
-        <div class="container darker">
-          <p>Wa'alaikumsalam</p>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <input type="text" placeholder="Type your message…" autofocus=""><button ><ion-icon name="send"></ion-icon></button>
-        <input type="hidden">
-
-
-      </div>
+        
 
 </ion-content>
