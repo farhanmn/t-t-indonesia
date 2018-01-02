@@ -18,6 +18,7 @@ import { PengaturanPage } from '../pages/pengaturan/pengaturan';
 import { KritikSaranPage } from '../pages/kritik-saran/kritik-saran';
 import { DatapribadiPage } from '../pages/datapribadi/datapribadi';
 import { DashboardSatuPage } from '../pages/dashboard-satu/dashboard-satu';
+import { DashboardDuaPage } from '../pages/dashboard-dua/dashboard-dua';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { DashboardSatuPage } from '../pages/dashboard-satu/dashboard-satu';
     FaqPage,
     PengaturanPage,
     KritikSaranPage,
-    DashboardSatuPage
+    DashboardSatuPage,
+    DashboardDuaPage
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,8 @@ import { DashboardSatuPage } from '../pages/dashboard-satu/dashboard-satu';
     FaqPage,
     PengaturanPage,
     KritikSaranPage,
-    DashboardSatuPage
+    DashboardSatuPage,
+    DashboardDuaPage
   ],
   providers: [
     StatusBar,

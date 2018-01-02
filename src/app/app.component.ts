@@ -15,6 +15,7 @@ import { FaqPage } from '../pages/faq/faq';
 import { PengaturanPage } from '../pages/pengaturan/pengaturan';
 import { KritikSaranPage } from '../pages/kritik-saran/kritik-saran';
 import { DashboardSatuPage } from '../pages/dashboard-satu/dashboard-satu';
+import { DashboardDuaPage } from '../pages/dashboard-dua/dashboard-dua';
 
 @Component({
   templateUrl: 'app.html'
@@ -37,9 +38,11 @@ export class MyApp {
       { title: 'Notifikasi', component: NotifikasiPage},
       { title: 'Kritik & Saran', component: KritikSaranPage},
       { title: 'Dashboard', component: DashboardPage },
-      { title: 'Dashboard 1', component: DashboardSatuPage},      
+      { title: 'Dashboard 1', component: DashboardSatuPage}, 
+      { title: 'Dashboard Dua',component: DashboardDuaPage},     
+      // TODO : Disable menu Data pribadi ketika Dashboard 1
       { title: 'Data Pribadi', component: DatapribadiPage},
-      { title: 'Data Calon', component: DataCalonPage},
+      { title: 'Data Calon', component: DataCalonPage}, 
       { title: 'Tata Cara Ta`aruf', component: TataCaraPage},
       { title: 'FAQ', component: FaqPage},
       { title: 'Pengaturan', component: PengaturanPage}
