@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {AlertController, IonicPage, NavController, NavParams, ViewController} from 'ionic-angular';
 import * as firebase from "firebase";
 import {AngularFireAuth} from "angularfire2/auth";
+import {AngularFireDatabase} from "angularfire2/database";
 
 /**
  * Generated class for the RecaptchaLoginModalPage page.
@@ -20,7 +21,7 @@ export class RecaptchaLoginModalPage {
   public phoneNumber: any;
   private appVerifier: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private afAuth: AngularFireAuth, private alertCtrl: AlertController, private viewCtrl: ViewController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private afAuth: AngularFireAuth, private alertCtrl: AlertController, private viewCtrl: ViewController, private afDB: AngularFireDatabase) {
     this.phoneNumber = navParams.get('phoneNumber');
   }
 
@@ -46,6 +47,10 @@ export class RecaptchaLoginModalPage {
                   confirmationResult.confirm(data.confirmationCode)
                     .then(function (result) {
                       // User signed in successfully.
+                      let user = {'no_hp': this.phoneNumber};
+
+                      // TODO: Wah ini perlu diubah ya
+                      this.afDB.list('users').push(user);
                       console.log(result.user);
                     }).catch(function (error) {
                     // User couldn't sign in (bad verification code?)
