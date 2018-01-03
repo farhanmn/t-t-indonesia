@@ -7,6 +7,18 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import {LoginPage} from "../pages/login/login";
 import {SplashScreenPage} from "../pages/splash-screen/splash-screen";
+import { DashboardPage } from '../pages/dashboard/dashboard';
+import { NotifikasiPage } from '../pages/notifikasi/notifikasi';
+import { PercakapanPage } from '../pages/percakapan/percakapan';
+import { DatapribadiPage } from '../pages/datapribadi/datapribadi';
+import { DataCalonPage } from '../pages/data-calon/data-calon';
+import { TataCaraPage } from '../pages/tata-cara/tata-cara';
+import { FaqPage } from '../pages/faq/faq';
+import { PengaturanPage } from '../pages/pengaturan/pengaturan';
+import { KritikSaranPage } from '../pages/kritik-saran/kritik-saran';
+import { DashboardSatuPage } from '../pages/dashboard-satu/dashboard-satu';
+import { DashboardDuaPage } from '../pages/dashboard-dua/dashboard-dua';
+import { DashboardTigaPage } from '../pages/dashboard-tiga/dashboard-tiga';
 
 @Component({
   templateUrl: 'app.html'
@@ -23,9 +35,25 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Assalamu`alaikum \n Titi', component: HomePage },
+      // { title: 'List', component: ListPage },
+      { title: 'Percakapan', component: PercakapanPage},
+      { title: 'Notifikasi', component: NotifikasiPage},
+      { title: 'Kritik & Saran', component: KritikSaranPage},
+      { title: 'Dashboard', component: DashboardPage },
+      { title: 'Dashboard 1', component: DashboardSatuPage},
+      { title: 'Dashboard Dua',component: DashboardDuaPage},
+      // TODO : Dashboard 3 tidak dapat melihat data calon
+      { title: 'Dashboard Three', component: DashboardTigaPage},
+      { title: 'Data Pribadi', component: DatapribadiPage},
+      // TODO : Disable menu Data pribadi ketika Dashboard 1
+      { title: 'Data Calon', component: DataCalonPage},
+      { title: 'Tata Cara Ta`aruf', component: TataCaraPage},
+      { title: 'FAQ', component: FaqPage},
+      { title: 'Pengaturan', component: PengaturanPage}
+
     ];
+
 
   }
 
