@@ -20,6 +20,10 @@ import { DatapribadiPage } from '../pages/datapribadi/datapribadi';
 import { DashboardSatuPage } from '../pages/dashboard-satu/dashboard-satu';
 import { DashboardDuaPage } from '../pages/dashboard-dua/dashboard-dua';
 import { DashboardTigaPage } from '../pages/dashboard-tiga/dashboard-tiga';
+import { DetailPermintaanPage } from '../pages/detail-permintaan/detail-permintaan';
+import { DetailPermintaanPageModule } from '../pages/detail-permintaan/detail-permintaan.module';
+// import { ChatPage } from '../pages/chat/chat';
+// import { EmojiProvider } from '../providers/emoji';
 
 @NgModule({
   declarations: [
@@ -38,10 +42,13 @@ import { DashboardTigaPage } from '../pages/dashboard-tiga/dashboard-tiga';
     DashboardSatuPage,
     DashboardDuaPage,
     DashboardTigaPage
+    // ChatPage
   ],
   imports: [
     BrowserModule,
+    DetailPermintaanPageModule,
     IonicModule.forRoot(MyApp),
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -60,11 +67,13 @@ import { DashboardTigaPage } from '../pages/dashboard-tiga/dashboard-tiga';
     DashboardSatuPage,
     DashboardDuaPage,
     DashboardTigaPage
+    // ChatPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    // EmojiProvider
   ]
 })
 export class AppModule {}

@@ -17,6 +17,8 @@ import { KritikSaranPage } from '../pages/kritik-saran/kritik-saran';
 import { DashboardSatuPage } from '../pages/dashboard-satu/dashboard-satu';
 import { DashboardDuaPage } from '../pages/dashboard-dua/dashboard-dua';
 import { DashboardTigaPage } from '../pages/dashboard-tiga/dashboard-tiga';
+// import { ChatPage } from '../pages/chat/chat';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -49,6 +51,7 @@ export class MyApp {
       { title: 'Tata Cara Ta`aruf', component: TataCaraPage},
       { title: 'FAQ', component: FaqPage},
       { title: 'Pengaturan', component: PengaturanPage}
+      // { title: 'Chat', component: ChatPage}
       
     ];
 
