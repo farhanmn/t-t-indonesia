@@ -4,23 +4,45 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<ion-header class="maxwidth">
 
-  <ion-navbar>
-    <ion-title>Masukkan Nomor Handphone</ion-title>
+  <!-- <ion-navbar> -->
+    <!-- <ion-title>Masukkan Nomor Handphone</ion-title> -->
 
-    <ion-buttons end>
+    <!-- <ion-buttons end>
       <button ion-button icon-only (click)="presentRecaptchaModal()">
         <ion-icon name="checkmark"></ion-icon>
       </button>
-    </ion-buttons>
-  </ion-navbar>
+    </ion-buttons> -->
+  <!-- </ion-navbar> -->
 
 </ion-header>
 
 
-<ion-content padding>
-  <ion-item>
-    <ion-input type="tel" placeholder="+62XXXXXXXXX" [(ngModel)]="phoneNumber"></ion-input>
-  </ion-item>
+<ion-content padding class="padding" class="maxwidth">
+    
+      <ion-grid>
+          <ion-row>
+              <ion-col>
+              </ion-col>
+              <section class="login-container">
+              <ion-col col="8">                
+                <h1>Selamat Datang</h1><br>
+                <img src="../assets/imgs/logo-ugm.png">
+                <br><br>
+                <h6>Mohon masukkan nomor Handphone</h6>
+                <ion-item>
+                    <ion-input type="tel" placeholder="+62XXXXXXXXX" [(ngModel)]="phoneNumber"></ion-input>
+                </ion-item>
+                <ion-buttons end>
+                    <button ion-button color="secondary" (click)="presentRecaptchaModal()">Login</button>
+                </ion-buttons>
+              </ion-col>
+          </section>
+              <ion-col>
+              </ion-col>
+          </ion-row>
+      </ion-grid>
+        
+     
 </ion-content>
