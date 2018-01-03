@@ -15,6 +15,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import {LoginPageModule} from "../pages/login/login.module";
 import {RecaptchaLoginModalPageModule} from "../pages/recaptcha-login-modal/recaptcha-login-modal.module";
 import {VerifyPhoneNumberPageModule} from "../pages/verify-phone-number/verify-phone-number.module";
+import {SplashScreenPageModule} from "../pages/splash-screen/splash-screen.module";
 
 export const firebaseConfig = {
   apiKey: "AIzaSyDyqh5k3soFBhmL5SrJj3exRaPHIAUnZYk",
@@ -38,7 +39,8 @@ export const firebaseConfig = {
     AngularFireAuthModule,
     LoginPageModule,
     RecaptchaLoginModalPageModule,
-    VerifyPhoneNumberPageModule
+    VerifyPhoneNumberPageModule,
+    SplashScreenPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -4,6 +4,7 @@ import * as firebase from "firebase";
 import {AngularFireAuth} from "angularfire2/auth";
 import ApplicationVerifier = firebase.auth.ApplicationVerifier;
 import {RecaptchaLoginModalPage} from "../recaptcha-login-modal/recaptcha-login-modal";
+import {HomePage} from "../home/home";
 
 /**
  * Generated class for the LoginPage page.
@@ -21,7 +22,13 @@ export class LoginPage {
 
   private phoneNumber: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController, private modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private menuCtrl: MenuController, private modalCtrl: ModalController, private afAuth: AngularFireAuth) {
+    afAuth.authState.subscribe(user => {
+      if (!user) {
+        return;
+      }
+      this.navCtrl.setRoot(HomePage);
+    });
   }
 
   ionViewDidEnter() {

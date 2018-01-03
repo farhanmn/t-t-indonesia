@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import {AlertController, MenuController, NavController} from 'ionic-angular';
+import {AngularFireAuth} from "angularfire2/auth";
+import {LoginPage} from "../login/login";
+import {AngularFireDatabase} from "angularfire2/database";
 
 @Component({
   selector: 'page-home',
@@ -7,7 +10,48 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  private phoneNumber;
+  private user;
+
+  constructor(public navCtrl: NavController, private menuCtrl: MenuController, private afAuth: AngularFireAuth, private alertCtrl: AlertController, private afDB: AngularFireDatabase) {
+    afAuth.authState.subscribe(user => {
+      if (!user) {
+        this.navCtrl.setRoot(LoginPage);
+        return;
+      }
+      this.phoneNumber = user.phoneNumber;
+      this.user = user;
+    });
+  }
+
+  ionViewDidEnter() {
+    // close and disable the side menu.  I don't want them accessing this unless they're logged in.
+    this.menuCtrl.close();
+    this.menuCtrl.enable(true);
+    this.menuCtrl.swipeEnable(false);
+  }
+
+  test() {
+    const cachedCart = this.afDB.object('/users/'+this.phoneNumber);
+    cachedCart.set({'uid': this.user.uid});
+  }
+
+  signOut() {
+    let prompt = this.alertCtrl.create({
+      title: 'Konfirmasi',
+      message: 'Apakah anda yakin ingin log out?',
+      buttons: [
+        { text: 'Tidak',
+          handler: data => { console.log('Cancel clicked'); }
+        },
+        { text: 'Ya',
+          handler: data => {
+            this.afAuth.auth.signOut();
+          }
+        }
+      ]
+    });
+    prompt.present();
   }
 
 }
