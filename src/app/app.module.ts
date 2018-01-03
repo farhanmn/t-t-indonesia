@@ -20,6 +20,10 @@ import { DatapribadiPage } from '../pages/datapribadi/datapribadi';
 import { DashboardSatuPage } from '../pages/dashboard-satu/dashboard-satu';
 import { DashboardDuaPage } from '../pages/dashboard-dua/dashboard-dua';
 import { DashboardTigaPage } from '../pages/dashboard-tiga/dashboard-tiga';
+import { DetailPermintaanPage } from '../pages/detail-permintaan/detail-permintaan';
+import { DetailPermintaanPageModule } from '../pages/detail-permintaan/detail-permintaan.module';
+// import { ChatPage } from '../pages/chat/chat';
+// import { EmojiProvider } from '../providers/emoji';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
@@ -54,9 +58,11 @@ export const firebaseConfig = {
     DashboardSatuPage,
     DashboardDuaPage,
     DashboardTigaPage
+    // ChatPage
   ],
   imports: [
     BrowserModule,
+    DetailPermintaanPageModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
@@ -83,6 +89,7 @@ export const firebaseConfig = {
     DashboardSatuPage,
     DashboardDuaPage,
     DashboardTigaPage
+    // ChatPage
   ],
   providers: [
     StatusBar,
