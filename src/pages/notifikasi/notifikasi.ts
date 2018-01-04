@@ -15,6 +15,7 @@ export class NotifikasiPage {
   }
   presentModal() {
     let modal = this.modalCtrl.create(DetailPermintaanPage);
+    
     modal.present();
   }
 
