@@ -11,3 +11,4 @@ import { SplashScreenPage } from './splash-screen';
   ],
 })
 export class SplashScreenPageModule {}
+

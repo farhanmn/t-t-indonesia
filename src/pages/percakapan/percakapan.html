@@ -1,0 +1,54 @@
+<!--
+  Generated template for the PercakapanPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Percakapan</ion-title>
+  </ion-navbar>
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="informasi">
+        Informasi Admin
+      </ion-segment-button>
+      <ion-segment-button value="grup">
+        Grup Ta'aruf
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'informasi'">
+        <ion-card>
+            <ion-card-content>
+                <hr>
+                <ion-input type="text" placeholder="Type your message">
+                </ion-input>
+                <button ion-button icon-start>Kirim
+                </button>
+              </ion-card-content>
+        </ion-card>
+      </ion-list>
+
+
+    <ion-list *ngSwitchCase="'grup'">
+        <ion-card>
+            <ion-card-content>
+              <hr>
+              <ion-input type="text" placeholder="Type your message">
+              </ion-input>
+              <button ion-button icon-start>Kirim
+              </button>
+            </ion-card-content>
+        </ion-card>
+    </ion-list>
+  </div>
+</ion-content>
