@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { DetailCalonPage } from '../detail-calon/detail-calon';
 // import {  } from 'ionic-angular';
 
 /**
@@ -16,11 +17,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DataCalonPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DataCalonPage');
+  presentModal() {
+    let modal = this.modalCtrl.create(DetailCalonPage);
+    
+    modal.present();
   }
 
 }

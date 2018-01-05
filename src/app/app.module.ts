@@ -34,6 +34,7 @@ import { DataCalonPageModule } from '../pages/data-calon/data-calon.module';
 import { PercakapanPageModule } from '../pages/percakapan/percakapan.module';
 import { NotifikasiPageModule } from '../pages/notifikasi/notifikasi.module';
 import { DashboardPageModule } from '../pages/dashboard/dashboard.module';
+import { DetailCalonPageModule } from '../pages/detail-calon/detail-calon.module';
 // import { ChatPage } from '../pages/chat/chat';
 // import { EmojiProvider } from '../providers/emoji';
 
@@ -59,6 +60,7 @@ import { DashboardPageModule } from '../pages/dashboard/dashboard.module';
   imports: [
     BrowserModule,
     DetailPermintaanPageModule,
+    DetailCalonPageModule,
     DashboardPageModule,
     NotifikasiPageModule,
     PercakapanPageModule,
