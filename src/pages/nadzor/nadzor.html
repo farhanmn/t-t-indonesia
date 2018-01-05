@@ -1,0 +1,27 @@
+<!--
+  Generated template for the NadzorPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>nadzor</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h2>Inputan Nadzor</h2>
+    <ion-item col-md-6>
+      <ion-label color="primary">Tempat</ion-label>
+      <ion-textarea placeholder="Tempat nadzor"></ion-textarea>      
+    </ion-item>
+    <ion-item col-md-6>
+      <ion-label color="primary">Tanggal</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YYYY" [(ngModel)]="myDateikhwan"></ion-datetime>
+    </ion-item>
+
+</ion-content>

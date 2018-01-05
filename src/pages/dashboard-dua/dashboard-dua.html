@@ -17,8 +17,8 @@
 
 <ion-content padding>
   <!-- TODO: hidden button sesuai keadaan, hanya ada 2 button yaitu 1 langkah step selanjutnya dan mundur ta'aruf -->
-    <button ion-button icon-left>
-      <ion-icon name="home" (click)="showConfirm()"></ion-icon>
+    <button ion-button icon-left [navPush]="nadzorPage">
+      <ion-icon name="home" ></ion-icon>
       Lanjut Nadzor
     </button>
     <button ion-button icon-left (click)="showConfirm()">

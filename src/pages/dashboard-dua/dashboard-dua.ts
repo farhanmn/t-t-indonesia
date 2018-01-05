@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
+import { NadzorPage } from '../nadzor/nadzor';
 
 /**
  * Generated class for the DashboardDuaPage page.
@@ -15,6 +16,7 @@ import { AlertController } from 'ionic-angular';
   templateUrl: 'dashboard-dua.html',
 })
 export class DashboardDuaPage {
+  nadzorPage = NadzorPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }

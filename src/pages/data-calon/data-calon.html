@@ -53,7 +53,7 @@
         <p><b>Pekerjaan</b> : Guru Matematika</p>
       </ion-item>
       <!-- <a id="permintaanTaAruf-button24" class="button button-balanced button-clear" (click)="presentModal()" >Lihat detail</a> -->
-      <button ion-button item-end (click) = "presentModal()">Lihat Detail Calon</button>
+      <button ion-button item-end [navPush]="detailCalonPage">Lihat Detail Calon</button>
       <!-- ui-sref="dataPermintaanTaAruf() -->
     </ion-card-content>
   </ion-card>  
@@ -71,7 +71,7 @@
         <p><b>Pekerjaan</b> : Guru Matematika</p>
       </ion-item>
       <!-- <a id="permintaanTaAruf-button24" class="button button-balanced button-clear" (click)="presentModal()" >Lihat detail</a> -->
-      <button ion-button item-end (click)="presentModal">Lihat Detail Calon</button>
+      <button ion-button item-end [navPush]="detailCalonPage">Lihat Detail Calon</button>
       <!-- ui-sref="dataPermintaanTaAruf() -->
     </ion-card-content>
     </ion-card>

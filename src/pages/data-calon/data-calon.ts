@@ -16,14 +16,15 @@ import { DetailCalonPage } from '../detail-calon/detail-calon';
   templateUrl: 'data-calon.html',
 })
 export class DataCalonPage {
+  detailCalonPage = DetailCalonPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
   }
 
-  presentModal() {
-    let modal = this.modalCtrl.create(DetailCalonPage);
+  // presentModal() {
+  //   let modal = this.modalCtrl.create(DetailCalonPage);
     
-    modal.present();
-  }
+  //   modal.present();
+  // }
 
 }

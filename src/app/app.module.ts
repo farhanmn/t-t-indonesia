@@ -35,6 +35,7 @@ import { PercakapanPageModule } from '../pages/percakapan/percakapan.module';
 import { NotifikasiPageModule } from '../pages/notifikasi/notifikasi.module';
 import { DashboardPageModule } from '../pages/dashboard/dashboard.module';
 import { DetailCalonPageModule } from '../pages/detail-calon/detail-calon.module';
+import { NadzorPageModule } from '../pages/nadzor/nadzor.module';
 // import { ChatPage } from '../pages/chat/chat';
 // import { EmojiProvider } from '../providers/emoji';
 
@@ -73,6 +74,7 @@ import { DetailCalonPageModule } from '../pages/detail-calon/detail-calon.module
     DashboardSatuPageModule,
     DashboardDuaPageModule,
     DashboardTigaPageModule,
+    NadzorPageModule,
     IonicModule.forRoot(MyApp),
 
   ],
