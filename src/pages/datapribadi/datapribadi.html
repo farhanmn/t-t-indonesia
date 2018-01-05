@@ -23,23 +23,26 @@
       <ion-item>
         <h2>Keluarga</h2>
         <!-- <p>Keluarga • </p> -->
-        <!-- <button ion-button clear item-end>Lihat</button> -->
-        <button ion-button clear item-end (click)="presentModal()">Lihat</button>
+        <button ion-button clear item-end [navPush]="keluarga">Lihat</button>
       </ion-item>
       <ion-item>
-        <h2>Pribadi</h2>
+        <h2>Pribadi Akhwat</h2>
         <!-- <p>Keluarga • </p> -->
-        <button ion-button clear item-end (click)="presentModalPribadi()">Lihat</button>
+        <button ion-button clear item-end [navPush]="pribadiakhwat">Lihat</button>
       </ion-item>
       <ion-item>
-        <h2>Kriteria Pasangan</h2>
+          <h2>Pribadi Ikhwan</h2>
+          <!-- <p>Keluarga • </p> -->
+          <button ion-button clear item-end [navPush]="pribadiikhwan">Lihat</button>
+        </ion-item>
+      <ion-item>
+        <h2>Kriteria</h2>
         <!-- <p>Keluarga • </p> -->
-        <button ion-button clear item-end>Lihat</button>
+        <button ion-button clear item-end [navPush]="kriteria">Lihat</button>
       </ion-item>
       <ion-item>
         <h2>Kajian</h2>
-        <!-- <p>Keluarga • </p> -->
-        <button ion-button clear item-end>Lihat</button>
+        <button ion-button clear item-end [navPush]="kajian">Lihat</button>
       </ion-item>
     </ion-list>
 </ion-content>

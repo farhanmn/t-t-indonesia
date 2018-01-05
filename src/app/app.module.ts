@@ -25,6 +25,9 @@ import { DashboardTigaPage } from '../pages/dashboard-tiga/dashboard-tiga';
 import { DetailPermintaanPageModule } from '../pages/detail-permintaan/detail-permintaan.module';
 import { KeluargaPageModule } from '../pages/keluarga/keluarga.module';
 import { PribadiPageModule } from '../pages/pribadi/pribadi.module';
+import { PribadiikhwanPageModule } from '../pages/pribadiikhwan/pribadiikhwan.module';
+import { KriteriapasanganPageModule } from '../pages/kriteriapasangan/kriteriapasangan.module';
+import { KajianPageModule } from '../pages/kajian/kajian.module';
 // import { ChatPage } from '../pages/chat/chat';
 // import { EmojiProvider } from '../providers/emoji';
 
@@ -67,8 +70,11 @@ export const firebaseConfig = {
   imports: [
     BrowserModule,
     DetailPermintaanPageModule,
-    KeluargaPageModule,
     PribadiPageModule,
+    PribadiikhwanPageModule,
+    KeluargaPageModule,
+    KriteriapasanganPageModule,
+    KajianPageModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,

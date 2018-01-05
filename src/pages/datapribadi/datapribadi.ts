@@ -3,6 +3,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
 import { KeluargaPage } from '../keluarga/keluarga';
 import { PribadiPage } from '../pribadi/pribadi';
+import { PribadiikhwanPage } from '../pribadiikhwan/pribadiikhwan';
+import { KriteriapasanganPage } from '../kriteriapasangan/kriteriapasangan';
+import { KajianPage } from '../kajian/kajian';
 
 /**
  * Generated class for the DatapribadiPage page.
@@ -17,6 +20,11 @@ import { PribadiPage } from '../pribadi/pribadi';
   templateUrl: 'datapribadi.html',
 })
 export class DatapribadiPage {
+  keluarga = KeluargaPage;
+  pribadiakhwat = PribadiPage;
+  pribadiikhwan = PribadiikhwanPage;
+  kriteria = KriteriapasanganPage;
+  kajian = KajianPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
   }
@@ -25,14 +33,5 @@ export class DatapribadiPage {
     console.log('ionViewDidLoad DatapribadiPage');
   }
 
-  presentModal() {
-    let modal = this.modalCtrl.create(KeluargaPage);
-    modal.present();
-  }
-
-  presentModalPribadi() {
-    let modal = this.modalCtrl.create(PribadiPage);
-    modal.present();
-  }
 }
 

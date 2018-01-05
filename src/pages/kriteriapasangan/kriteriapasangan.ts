@@ -22,4 +22,6 @@ export class KriteriapasanganPage {
     console.log('ionViewDidLoad KriteriapasanganPage');
   }
 
+  myDate: String = new Date().toISOString();
+  // public date: string = new Date().toISOString();
 }
