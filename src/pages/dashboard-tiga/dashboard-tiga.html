@@ -16,6 +16,17 @@
 
 
 <ion-content padding>
+
+    <ion-list>
+        <ion-item class="warning">
+          <ion-avatar item-start>
+            <img src="img/1.png">
+          </ion-avatar>
+          <h2>Anda belum menyelesaikan <b>Kritik & Saran, Testimoni , serta Kisah Ta'aruf</b></h2>
+          <!-- <h3>Sebelum data lengkap Anda belum dapat memulai Ta'aruf</h3> -->
+          <p>Silahkan melengkapi terlebih dahulu</p>
+        </ion-item>
+      </ion-list>
   <!-- TODO: hidden button sesuai keadaan, hanya ada 2 button yaitu 1 langkah step selanjutnya dan mundur ta'aruf -->
     <button ion-button icon-left (click)="showTesti()">
       <ion-icon name="home" ></ion-icon>
@@ -25,10 +36,17 @@
       <ion-icon name="md-close"></ion-icon>
       Mundur Ta`aruf
     </button>
-    <!-- TODO: jika selesai ta'aruf maka upload foto walimah atau nikah -->
-    <button ion-button icon-left (click)="showTesti()">
-      <ion-icon ></ion-icon>
-      Upload Foto Nikah
+    <button ion-button icon-left color="secondary" [navPush]="kritikSaranPage">
+      <ion-icon name="open" ></ion-icon>
+      Kritik & Saran
+    </button>    
+    <button ion-button icon-left color="secondary"  [navPush]="testimoniPage">
+      <ion-icon name="happy"></ion-icon>
+      Testimoni
+    </button>
+    <button ion-button icon-left color="secondary"  [navPush]="kisahPage">
+      <ion-icon name="paper"></ion-icon>
+      Kisah Ta'aruf
     </button>
 
    

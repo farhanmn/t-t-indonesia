@@ -13,7 +13,7 @@ import { DataCalonPage } from '../pages/data-calon/data-calon';
 import { TataCaraPage } from '../pages/tata-cara/tata-cara';
 import { FaqPage } from '../pages/faq/faq';
 import { PengaturanPage } from '../pages/pengaturan/pengaturan';
-import { KritikSaranPage } from '../pages/kritik-saran/kritik-saran';
+// import { KritikSaranPage } from '../pages/kritik-saran/kritik-saran';
 import { DashboardSatuPage } from '../pages/dashboard-satu/dashboard-satu';
 import { DashboardDuaPage } from '../pages/dashboard-dua/dashboard-dua';
 import { DashboardTigaPage } from '../pages/dashboard-tiga/dashboard-tiga';
@@ -39,7 +39,7 @@ export class MyApp {
       // { title: 'List', component: ListPage },      
       { title: 'Percakapan', component: PercakapanPage},
       { title: 'Notifikasi', component: NotifikasiPage},
-      { title: 'Kritik & Saran', component: KritikSaranPage},
+      // { title: 'Kritik & Saran', component: KritikSaranPage},
       { title: 'Dashboard', component: DashboardPage },
       { title: 'Dashboard 1', component: DashboardSatuPage}, 
       { title: 'Dashboard Dua',component: DashboardDuaPage}, 

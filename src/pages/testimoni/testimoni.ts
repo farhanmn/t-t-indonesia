@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 /**
- * Generated class for the KritikSaranPage page.
+ * Generated class for the TestimoniPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,21 +10,21 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 
 @IonicPage()
 @Component({
-  selector: 'page-kritik-saran',
-  templateUrl: 'kritik-saran.html',
+  selector: 'page-testimoni',
+  templateUrl: 'testimoni.html',
 })
-export class KritikSaranPage {
+export class TestimoniPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
   // ionViewDidLoad() {
-  //   console.log('ionViewDidLoad KritikSaranPage');
+  //   console.log('ionViewDidLoad TestimoniPage');
   // }
-  showConfirmKritik() {
+  showConfirmTesti() {
     let prompt = this.alertCtrl.create({
-      title: 'Kritik & Saran',
-      message: "Apakah Anda yakin ingin mengirimkan kritik & saran tersebut ?",
+      title: 'Testimoni',
+      message: "Apakah Anda yakin ingin mengirim testimoni tersebut ?",
       
       buttons: [
         {
