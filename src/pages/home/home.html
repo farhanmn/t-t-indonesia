@@ -3,7 +3,11 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title> Home</ion-title>
+    <ion-title>Home</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="signOut()">Log Out</button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -14,6 +18,6 @@
     Halo, {{phoneNumber}}
   </p>
   <button ion-button (click)="test()">Test</button>
-  <button ion-button (click)="signOut()">Log Out</button>
+  <!-- <button ion-button (click)="signOut()">Log Out</button> -->
   <!-- TODO: fjdsalkjfklad -->
 </ion-content>

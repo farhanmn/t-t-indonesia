@@ -3,6 +3,7 @@ import {AlertController, MenuController, NavController} from 'ionic-angular';
 import {AngularFireAuth} from "angularfire2/auth";
 import {LoginPage} from "../login/login";
 import {AngularFireDatabase} from "angularfire2/database";
+import {ChatPage} from "../chat/chat";
 
 @Component({
   selector: 'page-home',
@@ -32,8 +33,7 @@ export class HomePage {
   }
 
   test() {
-    const cachedCart = this.afDB.object('/users/'+this.phoneNumber);
-    cachedCart.set({'uid': this.user.uid});
+    this.navCtrl.push(ChatPage);
   }
 
   signOut() {
