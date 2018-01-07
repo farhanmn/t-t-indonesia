@@ -41,7 +41,7 @@ export class MyApp {
       { title: 'Percakapan', component: PercakapanPage},
       { title: 'Notifikasi', component: NotifikasiPage},
       // { title: 'Kritik & Saran', component: KritikSaranPage},
-      { title: 'Dashboard', component: DashboardPage },
+      { title: 'Dashboard Wali', component: DashboardPage },
       { title: 'Dashboard 1', component: DashboardSatuPage}, 
       { title: 'Dashboard Dua',component: DashboardDuaPage}, 
       // TODO : Dashboard 3 tidak dapat melihat data calon  

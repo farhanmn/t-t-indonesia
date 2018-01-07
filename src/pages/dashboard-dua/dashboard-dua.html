@@ -16,6 +16,18 @@
 
 
 <ion-content class="maxwidth">
+
+
+  <!-- bila sedang mengajukan -->
+    <ion-list class="sedangmengajukan">
+      <p> anda sedang mengajukan permintaan ta'aruf kepada <a href="#"> banana pisang</a></p>
+    <button ion-button full icon-left color="danger" (click)="batalPengajuan()">
+      <ion-icon name="md-close"></ion-icon>
+      Batalkan Pengajuan
+    </button>
+    </ion-list>
+
+    <!-- bila sudah ta'aruf -->
   <ion-list class="taarufdengan">
     <p> anda sedang berta'aruf dengan <a href="#">ananda anda</a></p>
   </ion-list>
