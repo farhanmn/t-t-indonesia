@@ -1,0 +1,33 @@
+<!--
+  Generated template for the JenisakunPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>jenisakun</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p>Saya mendaftar sebagai</p>
+  <ion-list>
+  <!-- TODO: hidden button sesuai keadaan, hanya ada 2 button yaitu 1 langkah step selanjutnya dan mundur ta'aruf -->
+    <button ion-button full icon-left [navPush]="nadzorPage">
+      <ion-icon name="home" ></ion-icon>
+      Peserta Ikhwan
+    </button>
+    <button ion-button full icon-left [navPush]="khitbahPage">
+      <ion-icon name="ios-arrow-dropright-outline"></ion-icon>
+      Peserta Akhwat
+    </button>
+    <button ion-button full icon-left [navPush]="akadPage">
+      <ion-icon name="arrow-dropright-circle"></ion-icon>
+      Wali
+    </button>
+  </ion-list>
+</ion-content>

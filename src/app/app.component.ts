@@ -17,6 +17,7 @@ import { PengaturanPage } from '../pages/pengaturan/pengaturan';
 import { DashboardSatuPage } from '../pages/dashboard-satu/dashboard-satu';
 import { DashboardDuaPage } from '../pages/dashboard-dua/dashboard-dua';
 import { DashboardTigaPage } from '../pages/dashboard-tiga/dashboard-tiga';
+import { JenisakunPage } from '../pages/jenisakun/jenisakun';
 // import { ChatPage } from '../pages/chat/chat';
 
 
@@ -50,7 +51,8 @@ export class MyApp {
       { title: 'Data Calon', component: DataCalonPage}, 
       { title: 'Tata Cara Ta`aruf', component: TataCaraPage},
       { title: 'FAQ', component: FaqPage},
-      { title: 'Pengaturan', component: PengaturanPage}
+      { title: 'Pengaturan', component: PengaturanPage},
+      { title: 'Jenis akun', component: JenisakunPage}
       // { title: 'Chat', component: ChatPage}
       
     ];

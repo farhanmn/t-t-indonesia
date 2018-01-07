@@ -41,6 +41,7 @@ import { KisahPageModule } from '../pages/kisah/kisah.module';
 import { KhitbahPageModule } from '../pages/khitbah/khitbah.module';
 import { AkadPageModule } from '../pages/akad/akad.module';
 import { WalimahPageModule } from '../pages/walimah/walimah.module';
+import { JenisakunPageModule } from "../pages/jenisakun/jenisakun.module";
 
 // import { ChatPage } from '../pages/chat/chat';
 // import { EmojiProvider } from '../providers/emoji';
@@ -87,6 +88,7 @@ import { WalimahPageModule } from '../pages/walimah/walimah.module';
     KhitbahPageModule,
     AkadPageModule,
     WalimahPageModule,
+    JenisakunPageModule,
     IonicModule.forRoot(MyApp),
 
   ],
