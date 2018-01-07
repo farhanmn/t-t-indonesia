@@ -38,6 +38,9 @@ import { DetailCalonPageModule } from '../pages/detail-calon/detail-calon.module
 import { NadzorPageModule } from '../pages/nadzor/nadzor.module';
 import { TestimoniPageModule } from '../pages/testimoni/testimoni.module';
 import { KisahPageModule } from '../pages/kisah/kisah.module';
+import { KhitbahPageModule } from '../pages/khitbah/khitbah.module';
+import { AkadPageModule } from '../pages/akad/akad.module';
+import { WalimahPageModule } from '../pages/walimah/walimah.module';
 
 // import { ChatPage } from '../pages/chat/chat';
 // import { EmojiProvider } from '../providers/emoji';
@@ -81,6 +84,9 @@ import { KisahPageModule } from '../pages/kisah/kisah.module';
     TestimoniPageModule,
     KisahPageModule,
     NadzorPageModule,
+    KhitbahPageModule,
+    AkadPageModule,
+    WalimahPageModule,
     IonicModule.forRoot(MyApp),
 
   ],

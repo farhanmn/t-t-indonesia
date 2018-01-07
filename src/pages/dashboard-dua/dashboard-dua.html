@@ -21,19 +21,15 @@
       <ion-icon name="home" ></ion-icon>
       Lanjut Nadzor
     </button>
-    <button ion-button icon-left (click)="showConfirm()">
+    <button ion-button icon-left [navPush]="khitbahPage">
       <ion-icon name="ios-arrow-dropright-outline"></ion-icon>
       Lanjut Khitbah
     </button>
-    <button ion-button icon-left (click)="showConfirm()">
-      <ion-icon name="ios-arrow-dropright-outline"></ion-icon>
-      Lanjut Khitbah
-    </button>
-    <button ion-button icon-left (click)="showConfirm()">
+    <button ion-button icon-left [navPush]="akadPage">
       <ion-icon name="arrow-dropright-circle"></ion-icon>
       Lanjut Akad
     </button>
-    <button ion-button icon-left (click)="showConfirm()">
+    <button ion-button icon-left [navPush]="walimahPage">
       <ion-icon name="ios-arrow-dropright-outline"></ion-icon>
       Lanjut Walimah
     </button>

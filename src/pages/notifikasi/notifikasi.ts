@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
 import { DetailPermintaanPage } from '../detail-permintaan/detail-permintaan';
-import { DetailPermintaanPageModule } from '../detail-permintaan/detail-permintaan.module';
+// import { DetailPermintaanPageModule } from '../detail-permintaan/detail-permintaan.module';
 
 
 @Component({

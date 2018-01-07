@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { NadzorPage } from '../nadzor/nadzor';
+import { KhitbahPage } from '../khitbah/khitbah';
+import { AkadPage } from '../akad/akad';
+import { WalimahPage } from '../walimah/walimah';
 
 /**
  * Generated class for the DashboardDuaPage page.
@@ -17,6 +20,9 @@ import { NadzorPage } from '../nadzor/nadzor';
 })
 export class DashboardDuaPage {
   nadzorPage = NadzorPage;
+  khitbahPage = KhitbahPage;
+  akadPage = AkadPage;
+  walimahPage = WalimahPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
