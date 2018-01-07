@@ -4,9 +4,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-import {LoginPage} from "../pages/login/login";
-import {SplashScreenPage} from "../pages/splash-screen/splash-screen";
+// import { ListPage } from '../pages/list/list';
+import { LoginPage } from "../pages/login/login";
+import { SplashScreenPage } from "../pages/splash-screen/splash-screen";
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { NotifikasiPage } from '../pages/notifikasi/notifikasi';
 import { PercakapanPage } from '../pages/percakapan/percakapan';
@@ -48,6 +48,7 @@ export class MyApp {
       // TODO : Dashboard 3 tidak dapat melihat data calon
       { title: 'Dashboard Three', component: DashboardTigaPage},
       { title: 'Data Pribadi', component: DatapribadiPage},
+      // { title: 'Chat', component: Chat},
       // TODO : Disable menu Data pribadi ketika Dashboard 1
       { title: 'Data Calon', component: DataCalonPage},
       { title: 'Tata Cara Ta`aruf', component: TataCaraPage},

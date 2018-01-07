@@ -14,14 +14,20 @@ import { PercakapanPage } from '../pages/percakapan/percakapan';
 import { DataCalonPage } from '../pages/data-calon/data-calon';
 import { TataCaraPage } from '../pages/tata-cara/tata-cara';
 import { FaqPage } from '../pages/faq/faq';
+// import { Chat } from '../pages/chat/chat';
 import { PengaturanPage } from '../pages/pengaturan/pengaturan';
 import { KritikSaranPage } from '../pages/kritik-saran/kritik-saran';
 import { DatapribadiPage } from '../pages/datapribadi/datapribadi';
 import { DashboardSatuPage } from '../pages/dashboard-satu/dashboard-satu';
 import { DashboardDuaPage } from '../pages/dashboard-dua/dashboard-dua';
 import { DashboardTigaPage } from '../pages/dashboard-tiga/dashboard-tiga';
-import { DetailPermintaanPage } from '../pages/detail-permintaan/detail-permintaan';
+// import { DetailPermintaanPage } from '../pages/detail-permintaan/detail-permintaan';
 import { DetailPermintaanPageModule } from '../pages/detail-permintaan/detail-permintaan.module';
+import { KeluargaPageModule } from '../pages/keluarga/keluarga.module';
+import { PribadiPageModule } from '../pages/pribadi/pribadi.module';
+import { PribadiikhwanPageModule } from '../pages/pribadiikhwan/pribadiikhwan.module';
+import { KriteriapasanganPageModule } from '../pages/kriteriapasangan/kriteriapasangan.module';
+import { KajianPageModule } from '../pages/kajian/kajian.module';
 // import { ChatPage } from '../pages/chat/chat';
 // import { EmojiProvider } from '../providers/emoji';
 
@@ -58,6 +64,7 @@ export const firebaseConfig = {
     TataCaraPage,
     DatapribadiPage,
     FaqPage,
+    // Chat,
     PengaturanPage,
     KritikSaranPage,
     DashboardSatuPage,
@@ -69,6 +76,11 @@ export const firebaseConfig = {
   imports: [
     BrowserModule,
     DetailPermintaanPageModule,
+    PribadiPageModule,
+    PribadiikhwanPageModule,
+    KeluargaPageModule,
+    KriteriapasanganPageModule,
+    KajianPageModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
@@ -92,6 +104,7 @@ export const firebaseConfig = {
     DatapribadiPage,
     TataCaraPage,
     FaqPage,
+    // Chat,
     PengaturanPage,
     KritikSaranPage,
     DashboardSatuPage,

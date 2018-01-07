@@ -15,47 +15,34 @@
 
 
 <ion-content padding="true" class="manual-ios-statusbar-padding">
-  <div class="spacer" style="height: 10px;"></div>
+  <!-- <div class="spacer" style="height: 10px;"></div> -->
   <h5 id="dataPribadi-heading44" style="color:#000000;">Silakan lengkapi data pribadi supaya dapat melakukan proses ta'aruf</h5>
   <div class="spacer" style="width: 300px; height: 10px;"></div>
-  <ion-list id="dataPribadi-list15">
-    <ion-item class="item-icon-left item-icon-right positive" id="dataPribadi-list-item55" ui-sref="uploadFoto()">
-      <i class="icon ion-android-image"></i>Upload Foto
-      <i class="icon ion-ios-checkmark-outline"></i>
-    </ion-item>
-    <ion-item class="item-icon-left item-icon-right positive" id="dataPribadi-list-item56" ui-sref="profil()">
-      <i class="icon ion-android-image"></i>Profil
-      <i class="icon ion-ios-checkmark-outline"></i>
-    </ion-item>
-    <ion-item class="item-icon-left item-icon-right positive" id="dataPribadi-list-item57" ui-sref="pendidikan()">
-      <i class="icon ion-android-image"></i>Pendidikan
-      <i class="icon ion-ios-checkmark-outline"></i>
-    </ion-item>
-    <ion-item class="item-icon-left item-icon-right positive" id="dataPribadi-list-item59" ui-sref="gambaranDiri()">
-      <i class="icon ion-android-image"></i>Gambaran Fisik
-      <i class="icon ion-ios-checkmark-outline"></i>
-    </ion-item>
-    <ion-item class="item-icon-left item-icon-right positive" id="dataPribadi-list-item60" ui-sref="gambaranPribadi()">
-      <i class="icon ion-ios-checkmark-outline"></i>Gambaran Diri
-      <i class="icon ion-ios-checkmark-outline"></i>
-    </ion-item>
-    <ion-item class="item-icon-left item-icon-right positive" id="dataPribadi-list-item61" ui-sref="kajianSunnah()">
-      <i class="icon ion-ios-checkmark-outline"></i>Kajian Sunnah
-      <i class="icon ion-ios-checkmark-outline"></i>
-    </ion-item>
-    <ion-item class="item-icon-left item-icon-right positive" id="dataPribadi-list-item62" ui-sref="persiapanPernikahan()">
-      <i class="icon ion-ios-flower-outline"></i>Persiapan Pernikahan
-      <i class="icon ion-ios-checkmark-outline"></i>
-    </ion-item>
-    <ion-item class="item-icon-left item-icon-right positive" id="dataPribadi-list-item63" ui-sref="kriteriaPasangan()">
-      <i class="icon ion-ios-checkmark-outline"></i>Kriteria Pasangan
-      <i class="icon ion-ios-checkmark-outline"></i>
-    </ion-item>
-    <ion-item class="item-icon-left" id="dataPribadi-list-item64" ui-sref="harapan()">
-      <i class="icon ion-ios-circle-outline"></i>Harapan</ion-item>
-    <ion-item class="item-icon-left" id="dataPribadi-list-item65" ui-sref="pengalamanTaAruf()">
-      <i class="icon ion-ios-circle-outline"></i>Pengalaman Ta'aruf</ion-item>
-    <ion-item class="item-icon-left" id="dataPribadi-list-item66" ui-sref="aktifitasHarian()">
-      <i class="icon ion-ios-circle-outline"></i>Aktifitas harian</ion-item>
-  </ion-list>
+
+  <ion-list>
+      <ion-item>
+        <h2>Keluarga</h2>
+        <!-- <p>Keluarga • </p> -->
+        <button ion-button clear item-end [navPush]="keluarga">Edit</button>
+      </ion-item>
+      <ion-item>
+        <h2>Pribadi Akhwat</h2>
+        <!-- <p>Keluarga • </p> -->
+        <button ion-button clear item-end [navPush]="pribadiakhwat">Edit</button>
+      </ion-item>
+      <ion-item>
+          <h2>Pribadi Ikhwan</h2>
+          <!-- <p>Keluarga • </p> -->
+          <button ion-button clear item-end [navPush]="pribadiikhwan">Edit</button>
+        </ion-item>
+      <ion-item>
+        <h2>Kriteria</h2>
+        <!-- <p>Keluarga • </p> -->
+        <button ion-button clear item-end [navPush]="kriteria">Edit</button>
+      </ion-item>
+      <ion-item>
+        <h2>Kajian</h2>
+        <button ion-button clear item-end [navPush]="kajian">Edit</button>
+      </ion-item>
+    </ion-list>
 </ion-content>

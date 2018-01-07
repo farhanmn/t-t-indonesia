@@ -15,41 +15,38 @@
 
 
 <ion-content padding="true">
-  <h4 id="permintaanTaAruf-heading9" style="color:#000000;font-weight:400;">Daftar Permintaan Ta'aruf</h4>
-  <div id="permintaanTaAruf-markdown6" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">Jika ada yang sesuai dengan kriteria, silakan klik bersedia ta'aruf</p>
-  </div>
-  <div class="list card" id="permintaanTaAruf-card22">
-    <ion-item id="permintaanTaAruf-list-item26">
-      <b>MN</b>
-      <br>
-      <br>
-      <p> TTL : Banten, 20 Januari 1995</p>
-      <p> Alamat : Jl. Mawar no 20 Banten</p>
-      <p> Kriteria Pasangan : </p>
-      <p> - Pendidikan : D3 </p>
-      <p> - Usia : 19-24 </p>
-      <p> - Domisili : dimana saja </p>
-      <p> - Lainnya : Ngaji sunnah</p>
-    </ion-item>
-    <!-- <a id="permintaanTaAruf-button24" class="button button-balanced button-clear" (click)="presentModal()" >Lihat detail</a> -->
-    <button ion-button item-end (click)="presentModal()">Lihat Detail Calon</button>
-    <!-- ui-sref="dataPermintaanTaAruf() -->
-  </div>
-  <div class="list card" id="permintaanTaAruf-card23">
-    <ion-item id="permintaanTaAruf-list-item34">
-      <b>Ahmad</b>
-      <br>
-      <br>
-      <p> TTL : Banten, 20 Januari 1995</p>
-      <p> Alamat : Jl. Mawar no 20 Banten</p>
-      <p> Kriteria Pasangan : </p>
-      <p> - Pendidikan : D3 </p>
-      <p> - Usia : 19-24 </p>
-      <p> - Domisili : dimana saja </p>
-      <p> - Lainnya : Ngaji sunnah</p>
-    </ion-item>
-    <!-- <button id="permintaanTaAruf-button25" class="button button-balanced button-clear" (click)="presentModal()">Lihat detail</button> -->
-    <button ion-button item-end (click)="presentModal()">Lihat Detail Calon</button>
-  </div>
+  <h3>Daftar Permintaan Ta'aruf</h3> <br>
+  Jika ada yang sesuai dengan kriteria, silakan klik bersedia ta'aruf
+    <ion-card>
+        <ion-card-header>
+          MN
+        </ion-card-header>
+        <ion-card-content>
+            <p> TTL : Banten, 20 Januari 1995</p>
+            <p> Alamat : Jl. Mawar no 20 Banten</p>
+            <p> Kriteria Pasangan : </p>
+            <p> - Pendidikan : D3 </p>
+            <p> - Usia : 19-24 </p>
+            <p> - Domisili : dimana saja </p>
+            <p> - Lainnya : Ngaji sunnah</p>
+        </ion-card-content>
+        <button ion-button item-end (click)="presentModal()">Lihat Detail Calon</button>
+    </ion-card>
+    
+
+    <ion-card>
+        <ion-card-header>
+          Ahmad
+        </ion-card-header>
+        <ion-card-content>
+            <p> TTL : Banten, 20 Januari 1995</p>
+            <p> Alamat : Jl. Mawar no 20 Banten</p>
+            <p> Kriteria Pasangan : </p>
+            <p> - Pendidikan : D3 </p>
+            <p> - Usia : 19-24 </p>
+            <p> - Domisili : dimana saja </p>
+            <p> - Lainnya : Ngaji sunnah</p>
+        </ion-card-content>
+        <button ion-button item-end (click)="presentModal()">Lihat Detail Calon</button>
+    </ion-card>
 </ion-content>

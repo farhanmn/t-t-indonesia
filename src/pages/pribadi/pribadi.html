@@ -1,0 +1,157 @@
+<!--
+  Generated template for the PribadiPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>pribadi akhwat</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-item>
+        <ion-input type="text" placeholder="Tempat Lahir">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Tanggal lahir</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YYYY" [(ngModel)]="myDateakhwat"></ion-datetime>
+    </ion-item>
+    <ion-item>
+        <ion-input type="text" placeholder="Kegiatan Harian">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input type="text" placeholder="Kebiasaan Baik">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input type="text" placeholder="Hal yang disukai">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input type="text" placeholder="Hal yang tidak disukai">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input type="text" placeholder="Riwayat Kesehatan">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input type="text" placeholder="Pekerjaan">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input type="text" placeholder="Status">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input type="text" placeholder="Pakaian Harian">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input type="text" placeholder="Hobi">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Kacamata</ion-label>
+        <ion-select [(ngModel)]="kacamata" interface="popover">
+          <ion-option value="yes">Ya</ion-option>
+          <ion-option value="no">Tidak</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-input type="number" placeholder="Tinggi Badan (dalam CM)">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input type="number" placeholder="Berat Badan (dalam KG)">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Pendidikan terakhir</ion-label>
+        <ion-select [(ngModel)]="pendidikan" interface="popover">
+          <ion-option value="sd">SD</ion-option>
+          <ion-option value="smp">SMP</ion-option>
+          <ion-option value="sma">SMA</ion-option>
+          <ion-option value="d3">D3</ion-option>
+          <ion-option value="s1">S1</ion-option>
+          <ion-option value="s2">S2</ion-option>
+          <ion-option value="s3">S3</ion-option>
+          <ion-option value="lain-lain">Lain-lain</ion-option>
+        </ion-select>
+        <ion-input type="text" placeholder="Program Studi"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Status</ion-label>
+        <ion-select [(ngModel)]="status" interface="popover">
+          <ion-option value="lajang">Lajang</ion-option>
+          <ion-option value="Menikah">Menikah</ion-option>
+          <ion-option value="janda">Janda</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>Pengalaman Taaruf Online</ion-label>
+        <ion-select [(ngModel)]="pengalamantaarufon" interface="popover">
+            <ion-option value="zong">belum pernah</ion-option>
+            <ion-option value="satu">1 kali</ion-option>
+            <ion-option value="dua">2 kali</ion-option>
+            <ion-option value="tiga">3 kali</ion-option>
+            <ion-option value="empat">4 kali</ion-option>
+            <ion-option value="lima">5 kali</ion-option>
+            <ion-option value="enam">lebih dari 5 kali</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>Pengalaman Taaruf Offline</ion-label>
+        <ion-select [(ngModel)]="pengalamantaarufoff" interface="popover">
+            <ion-option value="nol">belum pernah</ion-option>
+            <ion-option value="one">1 kali</ion-option>
+            <ion-option value="two">2 kali</ion-option>
+            <ion-option value="three">3 kali</ion-option>
+            <ion-option value="four">4 kali</ion-option>
+            <ion-option value="five">5 kali</ion-option>
+            <ion-option value="six">lebih dari 5 kali</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>Hijab Syar'i</ion-label>
+        <ion-select [(ngModel)]="hijab" interface="popover">
+            <ion-option value="yeshijab">Sudah</ion-option>
+            <ion-option value="nohijab">Belum</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>Niqob</ion-label>
+        <ion-select [(ngModel)]="niqob" interface="popover">
+            <ion-option value="yesniqob">Sudah</ion-option>
+            <ion-option value="noniqob">Belum</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>Sudah siap nikah?</ion-label>
+        <ion-select [(ngModel)]="siapnikah" interface="popover">
+            <ion-option value="yessiap">Sudah</ion-option>
+            <ion-option value="nosiap">Belum</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>Izin Ortu</ion-label>
+        <ion-select [(ngModel)]="izin" interface="popover">
+            <ion-option value="yesizin">Sudah</ion-option>
+            <ion-option value="noizin">Belum</ion-option>
+        </ion-select>
+    </ion-item>
+    <br><br>
+    <ion-buttons end>
+        <button ion-button icon-start>
+            <ion-icon name='save'></ion-icon>
+            Simpan
+        </button>
+    </ion-buttons>
+</ion-content>
