@@ -33,7 +33,11 @@ export class HomePage {
   }
 
   test() {
-    this.navCtrl.push(ChatPage);
+    // User signed in successfully.
+    let user = {'lastLogin': Date.now()};
+
+    // TODO: Wah ini perlu diubah ya
+    this.afDB.object('users/'+this.phoneNumber).update(user);
   }
 
   signOut() {

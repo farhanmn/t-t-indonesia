@@ -50,7 +50,7 @@ export class RecaptchaLoginModalPage {
                       let user = {'no_hp': this.phoneNumber};
 
                       // TODO: Wah ini perlu diubah ya
-                      this.afDB.list('users').push(user);
+                      this.afDB.list('users/'+this.phoneNumber).push(user);
                       console.log(result.user);
                     }).catch(function (error) {
                     // User couldn't sign in (bad verification code?)

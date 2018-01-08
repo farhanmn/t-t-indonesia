@@ -7,17 +7,6 @@ import { HomePage } from '../pages/home/home';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { DashboardPage } from '../pages/dashboard/dashboard';
-import { NotifikasiPage } from '../pages/notifikasi/notifikasi';
-import { DataCalonPage } from '../pages/data-calon/data-calon';
-import { TataCaraPage } from '../pages/tata-cara/tata-cara';
-import { FaqPage } from '../pages/faq/faq';
-import { PengaturanPage } from '../pages/pengaturan/pengaturan';
-import { KritikSaranPage } from '../pages/kritik-saran/kritik-saran';
-import { DatapribadiPage } from '../pages/datapribadi/datapribadi';
-import { DashboardSatuPage } from '../pages/dashboard-satu/dashboard-satu';
-import { DashboardDuaPage } from '../pages/dashboard-dua/dashboard-dua';
-import { DashboardTigaPage } from '../pages/dashboard-tiga/dashboard-tiga';
 import { KeluargaPageModule } from '../pages/keluarga/keluarga.module';
 import { PribadiPageModule } from '../pages/pribadi/pribadi.module';
 import { PribadiikhwanPageModule } from '../pages/pribadiikhwan/pribadiikhwan.module';
@@ -108,7 +97,8 @@ export const firebaseConfig = {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp
+    MyApp,
+    HomePage
   ],
   providers: [
     StatusBar,
