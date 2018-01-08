@@ -15,19 +15,19 @@
 
 
 <ion-content padding="true" class="has-header maxwidth">
-    <h4 id="dataCalon-heading7" style="color:#000000;font-weight:300;">Cari berdasarkan usia:</h4>
-    <div id="permintaanTaAruf-markdown6" class="show-list-numbers-and-dots">
-      <ion-item col-sm-3>
-        <ion-input type="number" placeholder="Usia minimal"></ion-input>
-        <ion-input type="number" placeholder="Usia maksimal"></ion-input>
-        
-      </ion-item>
-      <button ion-button round outline>
+  <h4 id="dataCalon-heading7" style="color:#000000;font-weight:300;">Cari berdasarkan usia:</h4>
+  <div id="permintaanTaAruf-markdown6" class="show-list-numbers-and-dots">
+    <ion-item col-sm-3>
+      <ion-input type="number" placeholder="Usia minimal"></ion-input>
+      <ion-input type="number" placeholder="Usia maksimal"></ion-input>
+
+    </ion-item>
+    <button ion-button round outline>
         <ion-icon name="md-search"> Cari</ion-icon>       
-      </button>  
-          
-    </div>
-    <!-- <form id="dataCalon-form15" class="list">
+      </button>
+
+  </div>
+  <!-- <form id="dataCalon-form15" class="list">
       <label class="item item-input item-stacked-label" id="dataCalon-input27">
         <span class="input-label">Domisili</span>
         <input type="text" placeholder="">
@@ -39,27 +39,9 @@
         <input type="text" placeholder="">
       </label>
     </form> -->
-    <ion-card>          
-      <ion-card-content>
-        <ion-item>
-        <h2><b>Ahmad</b></h2>
-        <hr>
-        <p><b>Domilisi </b> : Yogyakarta</p>
-        <p><b>Alamat Asal</b> : Jl. Mawar no 20 Banten</p>
-        <p><b>Suku</b> : Sunda</p>
-        <p><b>Status</b> : Lajang </p>
-        <p><b>Usia</b> : 22 </p>
-        <p><b>Pendidikan Terakhir</b> : S1 Matematika</p>
-        <p><b>Pekerjaan</b> : Guru Matematika</p>
-      </ion-item>
-      <!-- <a id="permintaanTaAruf-button24" class="button button-balanced button-clear" (click)="presentModal()" >Lihat detail</a> -->
-      <button ion-button item-end [navPush]="detailCalonPage">Lihat Detail Calon</button>
-      <!-- ui-sref="dataPermintaanTaAruf() -->
-    </ion-card-content>
-  </ion-card>  
   <ion-card>
-      <ion-card-content>
-        <ion-item>
+    <ion-card-content>
+      <ion-item>
         <h2><b>Ahmad</b></h2>
         <hr>
         <p><b>Domilisi </b> : Yogyakarta</p>
@@ -74,5 +56,23 @@
       <button ion-button item-end [navPush]="detailCalonPage">Lihat Detail Calon</button>
       <!-- ui-sref="dataPermintaanTaAruf() -->
     </ion-card-content>
-    </ion-card>
-  </ion-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <h2><b>Ahmad</b></h2>
+        <hr>
+        <p><b>Domilisi </b> : Yogyakarta</p>
+        <p><b>Alamat Asal</b> : Jl. Mawar no 20 Banten</p>
+        <p><b>Suku</b> : Sunda</p>
+        <p><b>Status</b> : Lajang </p>
+        <p><b>Usia</b> : 22 </p>
+        <p><b>Pendidikan Terakhir</b> : S1 Matematika</p>
+        <p><b>Pekerjaan</b> : Guru Matematika</p>
+      </ion-item>
+      <!-- <a id="permintaanTaAruf-button24" class="button button-balanced button-clear" (click)="presentModal()" >Lihat detail</a> -->
+      <button ion-button item-end [navPush]="detailCalonPage">Lihat Detail Calon</button>
+      <!-- ui-sref="dataPermintaanTaAruf() -->
+    </ion-card-content>
+  </ion-card>
+</ion-content>

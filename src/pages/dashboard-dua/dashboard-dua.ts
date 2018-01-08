@@ -40,7 +40,7 @@ export class DashboardDuaPage {
   akadPage = AkadPage;
   walimahPage = WalimahPage;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) { }
 
   // alert konfirmasi lanjut ta'aruf
   showConfirm() {
@@ -48,17 +48,17 @@ export class DashboardDuaPage {
       title: 'Apakah Anda yakin ingin melanjutkan ?',
       // message: 'Do you agree to use this lightsaber to do good across the intergalactic galaxy?',
       buttons: [{
-          text: 'Yakin',
-          handler: () => {
-            console.log('Yakin clicked');
-          }
-        },
-        {
-          text: 'Batal',
-          handler: () => {
-            console.log('Batal clicked');
-          }
+        text: 'Yakin',
+        handler: () => {
+          console.log('Yakin clicked');
         }
+      },
+      {
+        text: 'Batal',
+        handler: () => {
+          console.log('Batal clicked');
+        }
+      }
       ]
     });
     confirm.present();
@@ -72,19 +72,19 @@ export class DashboardDuaPage {
       inputs: [{
         name: 'alasan',
         placeholder: 'alasan mundur dari ta`aruf'
-      }, ],
+      },],
       buttons: [{
-          text: 'Batal',
-          handler: data => {
-            console.log('Cancel clicked');
-          }
-        },
-        {
-          text: 'Simpan',
-          handler: data => {
-            console.log('Saved clicked');
-          }
+        text: 'Batal',
+        handler: data => {
+          console.log('Cancel clicked');
         }
+      },
+      {
+        text: 'Simpan',
+        handler: data => {
+          console.log('Saved clicked');
+        }
+      }
       ]
     });
     prompt.present();
@@ -92,12 +92,12 @@ export class DashboardDuaPage {
 
 
 
-// alert batal pengajuan
-batalPengajuan() {
-  let confirm = this.alertCtrl.create({
-    title: 'Anda yakin ingin membatalkan pengajuan Taaruf?',
-    message: 'Dengan membatalkannya, permintaan anda kecalon yang sebelumnya anda pilih akan dibatalkan',
-    buttons: [{
+  // alert batal pengajuan
+  batalPengajuan() {
+    let confirm = this.alertCtrl.create({
+      title: 'Anda yakin ingin membatalkan pengajuan Taaruf?',
+      message: 'Dengan membatalkannya, permintaan anda kecalon yang sebelumnya anda pilih akan dibatalkan',
+      buttons: [{
         text: 'Tidak',
         handler: () => {
           console.log('Tidak clicked');
@@ -109,10 +109,10 @@ batalPengajuan() {
           console.log('Ya clicked');
         }
       }
-    ]
-  });
-  confirm.present();
-}
+      ]
+    });
+    confirm.present();
+  }
 
 }
 // ionViewDidLoad() {

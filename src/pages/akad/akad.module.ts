@@ -10,4 +10,4 @@ import { AkadPage } from './akad';
     IonicPageModule.forChild(AkadPage),
   ],
 })
-export class AkadPageModule {}
+export class AkadPageModule { }

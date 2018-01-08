@@ -21,7 +21,7 @@ export class DashboardTigaPage {
   testimoniPage = TestimoniPage;
   kisahPage = KisahPage;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController ) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
   showPrompt() {
@@ -60,7 +60,7 @@ export class DashboardTigaPage {
         {
           name: 'testimoni',
           placeholder: 'testimoni proses ta`aruf'
-        },{
+        }, {
           name: 'kritik & saran',
           placeholder: 'kritik & saran untuk T&T'
         }
@@ -83,7 +83,7 @@ export class DashboardTigaPage {
     prompt.present();
   }
 
-  
+
 
 
   // ionViewDidLoad() {
