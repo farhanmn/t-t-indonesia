@@ -9,7 +9,6 @@ import { LoginPage } from "../pages/login/login";
 import { SplashScreenPage } from "../pages/splash-screen/splash-screen";
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { NotifikasiPage } from '../pages/notifikasi/notifikasi';
-import { PercakapanPage } from '../pages/percakapan/percakapan';
 import { DatapribadiPage } from '../pages/datapribadi/datapribadi';
 import { DataCalonPage } from '../pages/data-calon/data-calon';
 import { TataCaraPage } from '../pages/tata-cara/tata-cara';
@@ -39,7 +38,6 @@ export class MyApp {
     this.pages = [
       { title: 'Assalamu`alaikum \n Titi', component: HomePage },
       // { title: 'List', component: ListPage },
-      { title: 'Percakapan', component: PercakapanPage},
       { title: 'Notifikasi', component: NotifikasiPage},
       { title: 'Kritik & Saran', component: KritikSaranPage},
       { title: 'Dashboard', component: DashboardPage },
