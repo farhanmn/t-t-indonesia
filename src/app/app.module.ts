@@ -4,7 +4,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-// import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -13,23 +12,36 @@ import { NotifikasiPage } from '../pages/notifikasi/notifikasi';
 import { DataCalonPage } from '../pages/data-calon/data-calon';
 import { TataCaraPage } from '../pages/tata-cara/tata-cara';
 import { FaqPage } from '../pages/faq/faq';
-// import { Chat } from '../pages/chat/chat';
 import { PengaturanPage } from '../pages/pengaturan/pengaturan';
 import { KritikSaranPage } from '../pages/kritik-saran/kritik-saran';
 import { DatapribadiPage } from '../pages/datapribadi/datapribadi';
 import { DashboardSatuPage } from '../pages/dashboard-satu/dashboard-satu';
 import { DashboardDuaPage } from '../pages/dashboard-dua/dashboard-dua';
 import { DashboardTigaPage } from '../pages/dashboard-tiga/dashboard-tiga';
-// import { DetailPermintaanPage } from '../pages/detail-permintaan/detail-permintaan';
-import { DetailPermintaanPageModule } from '../pages/detail-permintaan/detail-permintaan.module';
 import { KeluargaPageModule } from '../pages/keluarga/keluarga.module';
 import { PribadiPageModule } from '../pages/pribadi/pribadi.module';
 import { PribadiikhwanPageModule } from '../pages/pribadiikhwan/pribadiikhwan.module';
 import { KriteriapasanganPageModule } from '../pages/kriteriapasangan/kriteriapasangan.module';
 import { KajianPageModule } from '../pages/kajian/kajian.module';
-// import { ChatPage } from '../pages/chat/chat';
-// import { EmojiProvider } from '../providers/emoji';
-
+import { DashboardTigaPageModule } from '../pages/dashboard-tiga/dashboard-tiga.module';
+import { DashboardDuaPageModule } from '../pages/dashboard-dua/dashboard-dua.module';
+import { DashboardSatuPageModule } from '../pages/dashboard-satu/dashboard-satu.module';
+import { KritikSaranPageModule } from '../pages/kritik-saran/kritik-saran.module';
+import { PengaturanPageModule } from '../pages/pengaturan/pengaturan.module';
+import { FaqPageModule } from '../pages/faq/faq.module';
+import { TataCaraPageModule } from '../pages/tata-cara/tata-cara.module';
+import { DatapribadiPageModule } from '../pages/datapribadi/datapribadi.module';
+import { DataCalonPageModule } from '../pages/data-calon/data-calon.module';
+import { NotifikasiPageModule } from '../pages/notifikasi/notifikasi.module';
+import { DashboardPageModule } from '../pages/dashboard/dashboard.module';
+import { DetailCalonPageModule } from '../pages/detail-calon/detail-calon.module';
+import { NadzorPageModule } from '../pages/nadzor/nadzor.module';
+import { TestimoniPageModule } from '../pages/testimoni/testimoni.module';
+import { KisahPageModule } from '../pages/kisah/kisah.module';
+import { KhitbahPageModule } from '../pages/khitbah/khitbah.module';
+import { AkadPageModule } from '../pages/akad/akad.module';
+import { WalimahPageModule } from '../pages/walimah/walimah.module';
+import { JenisakunPageModule } from "../pages/jenisakun/jenisakun.module";
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -40,8 +52,7 @@ import {SplashScreenPageModule} from "../pages/splash-screen/splash-screen.modul
 import {ChatPageModule} from "../pages/chat/chat.module";
 import {HttpModule} from "@angular/http";
 import { UserProvider } from '../providers/user/user';
-import {KeysPipe} from "../pipes/keys/keys";
-import {PipesModule} from "../pipes/pipes.module";
+import {DetailPermintaanPageModule} from "../pages/detail-permintaan/detail-permintaan.module";
 
 export const firebaseConfig = {
   apiKey: "AIzaSyDyqh5k3soFBhmL5SrJj3exRaPHIAUnZYk",
@@ -55,21 +66,6 @@ export const firebaseConfig = {
   declarations: [
     MyApp,
     HomePage,
-    // ListPage,
-    DashboardPage,
-    NotifikasiPage,
-    DataCalonPage,
-    TataCaraPage,
-    DatapribadiPage,
-    FaqPage,
-    // Chat,
-    PengaturanPage,
-    KritikSaranPage,
-    DashboardSatuPage,
-    DashboardDuaPage,
-    DashboardTigaPage,
-    KeysPipe
-    // ChatPage
   ],
   imports: [
     BrowserModule,
@@ -79,6 +75,26 @@ export const firebaseConfig = {
     KeluargaPageModule,
     KriteriapasanganPageModule,
     KajianPageModule,
+    DetailCalonPageModule,
+    DashboardPageModule,
+    NotifikasiPageModule,
+    DataCalonPageModule,
+    DatapribadiPageModule,
+    TataCaraPageModule,
+    FaqPageModule,
+    PengaturanPageModule,
+    KritikSaranPageModule,
+    DashboardSatuPageModule,
+    DashboardDuaPageModule,
+    DashboardTigaPageModule,
+    KritikSaranPageModule,
+    TestimoniPageModule,
+    KisahPageModule,
+    NadzorPageModule,
+    KhitbahPageModule,
+    AkadPageModule,
+    WalimahPageModule,
+    JenisakunPageModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
@@ -92,22 +108,7 @@ export const firebaseConfig = {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    HomePage,
-    // ListPage,
-    DashboardPage,
-    NotifikasiPage,
-    DataCalonPage,
-    DatapribadiPage,
-    TataCaraPage,
-    FaqPage,
-    // Chat,
-    PengaturanPage,
-    KritikSaranPage,
-    DashboardSatuPage,
-    DashboardDuaPage,
-    DashboardTigaPage
-    // ChatPage
+    MyApp
   ],
   providers: [
     StatusBar,

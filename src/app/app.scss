@@ -14,16 +14,21 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-.login-container {
-    background: #fff;
-    background-image: linear-gradient(120deg, #fff 0%, #fff 100%);
-    overflow: hidden;
-    opacity: 0.9;
-    filter: alpha(opacity=90);
-    border-radius: 6pt;
-    width: 500px;
-    padding: 10px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    
+
+@media(min-width:768px){
+    .maxwidth{
+        margin-left: 25%;
+        margin-right:25%;
+        max-width: 50%;
+    }
 }
 
+.broadcast{
+    margin:1%;
+    border: solid grey 2px;
+}
+
+.pemberitahuan{
+    margin:1%;
+    border: solid white 1px;
+}

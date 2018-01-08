@@ -4,7 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<ion-header class="maxwidth">
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -14,39 +14,46 @@
 </ion-header>
 
 
-<ion-content padding="true">
-  <h3>Daftar Permintaan Ta'aruf</h3> <br>
-  Jika ada yang sesuai dengan kriteria, silakan klik bersedia ta'aruf
-    <ion-card>
-        <ion-card-header>
-          MN
-        </ion-card-header>
-        <ion-card-content>
-            <p> TTL : Banten, 20 Januari 1995</p>
-            <p> Alamat : Jl. Mawar no 20 Banten</p>
-            <p> Kriteria Pasangan : </p>
-            <p> - Pendidikan : D3 </p>
-            <p> - Usia : 19-24 </p>
-            <p> - Domisili : dimana saja </p>
-            <p> - Lainnya : Ngaji sunnah</p>
-        </ion-card-content>
-        <button ion-button item-end (click)="presentModal()">Lihat Detail Calon</button>
-    </ion-card>
-    
-
-    <ion-card>
-        <ion-card-header>
-          Ahmad
-        </ion-card-header>
-        <ion-card-content>
-            <p> TTL : Banten, 20 Januari 1995</p>
-            <p> Alamat : Jl. Mawar no 20 Banten</p>
-            <p> Kriteria Pasangan : </p>
-            <p> - Pendidikan : D3 </p>
-            <p> - Usia : 19-24 </p>
-            <p> - Domisili : dimana saja </p>
-            <p> - Lainnya : Ngaji sunnah</p>
-        </ion-card-content>
-        <button ion-button item-end (click)="presentModal()">Lihat Detail Calon</button>
-    </ion-card>
+<ion-content padding="true" class="maxwidth">
+  <h4 id="permintaanTaAruf-heading9" style="color:#000000;font-weight:400;">Daftar Permintaan Ta'aruf</h4>
+  <div id="permintaanTaAruf-markdown6" class="show-list-numbers-and-dots">
+    <p style="color:#000000;">Jika ada yang sesuai dengan kriteria, silakan klik bersedia ta'aruf</p>
+  </div>
+  <ion-card>          
+    <ion-card-content>
+      <ion-item>
+      <h2><b>Ahmad</b></h2>
+      <hr>
+      <p><b>Domilisi </b> : Yogyakarta</p>
+      <p><b>Alamat Asal</b> : Jl. Mawar no 20 Banten</p>
+      <p><b>Suku</b> : Sunda</p>
+      <p><b>Status</b> : Lajang </p>
+      <p><b>Usia</b> : 22 </p>
+      <p><b>Pendidikan Terakhir</b> : S1 Matematika</p>
+      <p><b>Pekerjaan</b> : Guru Matematika</p>
+    </ion-item>
+    <!-- <a id="permintaanTaAruf-button24" class="button button-balanced button-clear" (click)="presentModal()" >Lihat detail</a> -->
+    <button ion-button item-end [navPush]="detailPermintaanPage">Lihat Detail Calon</button>
+    <!-- ui-sref="dataPermintaanTaAruf() -->
+  </ion-card-content>
+</ion-card>          
+  
+<ion-card>          
+    <ion-card-content>
+      <ion-item>
+      <h2><b>Ahmad</b></h2>
+      <hr>
+      <p><b>Domilisi </b> : Yogyakarta</p>
+      <p><b>Alamat Asal</b> : Jl. Mawar no 20 Banten</p>
+      <p><b>Suku</b> : Sunda</p>
+      <p><b>Status</b> : Lajang </p>
+      <p><b>Usia</b> : 22 </p>
+      <p><b>Pendidikan Terakhir</b> : S1 Matematika</p>
+      <p><b>Pekerjaan</b> : Guru Matematika</p>
+    </ion-item>
+    <!-- <a id="permintaanTaAruf-button24" class="button button-balanced button-clear" (click)="presentModal()" >Lihat detail</a> -->
+    <button ion-button item-end [navPush]="detailPermintaanPage">Lihat Detail Calon</button>
+    <!-- ui-sref="dataPermintaanTaAruf() -->
+  </ion-card-content>
+</ion-card>          
 </ion-content>

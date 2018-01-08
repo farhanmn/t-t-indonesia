@@ -4,8 +4,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-// import { ListPage } from '../pages/list/list';
-import { LoginPage } from "../pages/login/login";
 import { SplashScreenPage } from "../pages/splash-screen/splash-screen";
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { NotifikasiPage } from '../pages/notifikasi/notifikasi';
@@ -14,11 +12,11 @@ import { DataCalonPage } from '../pages/data-calon/data-calon';
 import { TataCaraPage } from '../pages/tata-cara/tata-cara';
 import { FaqPage } from '../pages/faq/faq';
 import { PengaturanPage } from '../pages/pengaturan/pengaturan';
-import { KritikSaranPage } from '../pages/kritik-saran/kritik-saran';
 import { DashboardSatuPage } from '../pages/dashboard-satu/dashboard-satu';
 import { DashboardDuaPage } from '../pages/dashboard-dua/dashboard-dua';
 import { DashboardTigaPage } from '../pages/dashboard-tiga/dashboard-tiga';
-// import { ChatPage } from '../pages/chat/chat';
+import { JenisakunPage } from '../pages/jenisakun/jenisakun';
+import {KritikSaranPage} from "../pages/kritik-saran/kritik-saran";
 
 
 @Component({
@@ -40,7 +38,8 @@ export class MyApp {
       // { title: 'List', component: ListPage },
       { title: 'Notifikasi', component: NotifikasiPage},
       { title: 'Kritik & Saran', component: KritikSaranPage},
-      { title: 'Dashboard', component: DashboardPage },
+      // { title: 'Kritik & Saran', component: KritikSaranPage},
+      { title: 'Dashboard Wali', component: DashboardPage },
       { title: 'Dashboard 1', component: DashboardSatuPage},
       { title: 'Dashboard Dua',component: DashboardDuaPage},
       // TODO : Dashboard 3 tidak dapat melihat data calon
@@ -51,7 +50,8 @@ export class MyApp {
       { title: 'Data Calon', component: DataCalonPage},
       { title: 'Tata Cara Ta`aruf', component: TataCaraPage},
       { title: 'FAQ', component: FaqPage},
-      { title: 'Pengaturan', component: PengaturanPage}
+      { title: 'Pengaturan', component: PengaturanPage},
+      { title: 'Jenis akun', component: JenisakunPage}
       // { title: 'Chat', component: ChatPage}
     ];
 

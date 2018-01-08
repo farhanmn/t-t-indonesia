@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { KritikSaranPage } from '../kritik-saran/kritik-saran';
+import { TestimoniPage } from '../testimoni/testimoni';
+import { KisahPage } from '../kisah/kisah';
 
 /**
  * Generated class for the DashboardTigaPage page.
@@ -14,6 +17,9 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
   templateUrl: 'dashboard-tiga.html',
 })
 export class DashboardTigaPage {
+  kritikSaranPage = KritikSaranPage;
+  testimoniPage = TestimoniPage;
+  kisahPage = KisahPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController ) {
   }
@@ -76,6 +82,8 @@ export class DashboardTigaPage {
     });
     prompt.present();
   }
+
+  
 
 
   // ionViewDidLoad() {

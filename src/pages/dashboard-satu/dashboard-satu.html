@@ -4,7 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<ion-header class="maxwidth">
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -14,20 +14,23 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="maxwidth">
+  <div class="pemberitahuan">
     <ion-list>
         <ion-item class="warning">
           <ion-avatar item-start>
             <img src="img/1.png">
           </ion-avatar>
-          <h2>Harap Lengkapi Data Pribadi</h2>
+          <h2><strong> Lengkapi Data Pribadi</strong></h2>
           <h3>Sebelum data lengkap Anda belum dapat memulai Ta'aruf</h3>
-          <p>Silahkan melengkapi data terlebih dahulu</p>
+          <a href="#">Silahkan melengkapi data terlebih dahulu</a>
         </ion-item>
       </ion-list>
-      <ion-card>      
+      </div>
+      <div class="broadcast">
+      <ion-card >      
     
-          <ion-card-content>
+          <ion-card-content >
               
             <ion-card-title>
               Broadcast Message
@@ -71,5 +74,6 @@
               </p>
             </ion-card-content>
         
-          </ion-card>  
+          </ion-card>
+          </div>  
 </ion-content>

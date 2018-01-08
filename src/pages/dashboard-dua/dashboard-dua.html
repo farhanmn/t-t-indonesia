@@ -4,7 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<ion-header class="maxwidth">
     <ion-navbar>
       <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
@@ -15,38 +15,52 @@
   
 
 
-<ion-content padding>
+<ion-content class="maxwidth">
+
+
+  <!-- bila sedang mengajukan -->
+    <ion-list class="sedangmengajukan">
+      <p> anda sedang mengajukan permintaan ta'aruf kepada <a href="#"> banana pisang</a></p>
+    <button ion-button full icon-left color="danger" (click)="batalPengajuan()">
+      <ion-icon name="md-close"></ion-icon>
+      Batalkan Pengajuan
+    </button>
+    </ion-list>
+
+    <!-- bila sudah ta'aruf -->
+  <ion-list class="taarufdengan">
+    <p> anda sedang berta'aruf dengan <a href="#">ananda anda</a></p>
+  </ion-list>
   <!-- TODO: hidden button sesuai keadaan, hanya ada 2 button yaitu 1 langkah step selanjutnya dan mundur ta'aruf -->
-    <button ion-button icon-left>
-      <ion-icon name="home" (click)="showConfirm()"></ion-icon>
+    <button ion-button full icon-left [navPush]="nadzorPage">
+      <ion-icon name="home" ></ion-icon>
       Lanjut Nadzor
     </button>
-    <button ion-button icon-left (click)="showConfirm()">
+    <button ion-button full icon-left [navPush]="khitbahPage">
       <ion-icon name="ios-arrow-dropright-outline"></ion-icon>
       Lanjut Khitbah
     </button>
-    <button ion-button icon-left (click)="showConfirm()">
-      <ion-icon name="ios-arrow-dropright-outline"></ion-icon>
-      Lanjut Khitbah
-    </button>
-    <button ion-button icon-left (click)="showConfirm()">
+    <button ion-button full icon-left [navPush]="akadPage">
       <ion-icon name="arrow-dropright-circle"></ion-icon>
       Lanjut Akad
     </button>
-    <button ion-button icon-left (click)="showConfirm()">
+    <button ion-button full icon-left [navPush]="walimahPage">
       <ion-icon name="ios-arrow-dropright-outline"></ion-icon>
       Lanjut Walimah
     </button>
-    <button ion-button icon-left (click)="showConfirm()">
+    <button ion-button full icon-left (click)="showConfirm()">
       <ion-icon name="arrow-dropright-circle"></ion-icon>
       Samara
     </button>
-    <button ion-button icon-left color="danger" (click)="showPrompt()">
+    <button ion-button full icon-left color="danger" (click)="showPrompt()">
       <ion-icon name="md-close"></ion-icon>
       Mundur Ta'aruf
     </button>
 
-    <ion-card>      
+
+
+      <div class="broadcast">
+      <ion-card>      
     
         <ion-card-content>
             
@@ -61,25 +75,9 @@
         </ion-card-content>
     
       </ion-card>
-
-      <ion-card>      
+      <ion-card >      
     
-          <ion-card-content>
-              
-            <ion-card-title>
-              Broadcast Message
-              </ion-card-title>
-              <!-- <img width="50" height="300" src="img/gambar.jpg"/> -->
-            <p>
-              This is a broadcast message. 
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            </p>
-          </ion-card-content>
-      
-        </ion-card>
-      <ion-card>      
-    
-          <ion-card-content>
+          <ion-card-content >
               
             <ion-card-title>
               Broadcast Message
@@ -88,9 +86,41 @@
             <p>
               This is a broadcast message. 
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
           </ion-card-content>
       
         </ion-card>
+  
+        <ion-card>      
+      
+            <ion-card-content>
+                
+              <ion-card-title>
+                Broadcast Message
+                </ion-card-title>
+                <!-- <img width="50" height="300" src="img/gambar.jpg"/> -->
+              <p>
+                This is a broadcast message. 
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+              </p>
+            </ion-card-content>
+        
+          </ion-card>
+        <ion-card>      
+      
+            <ion-card-content>
+                
+              <ion-card-title>
+                Broadcast Message
+                </ion-card-title>
+                <!-- <img width="50" height="300" src="img/gambar.jpg"/> -->
+              <p>
+                This is a broadcast message. 
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </p>
+            </ion-card-content>
+        
+          </ion-card>
+          </div>
 </ion-content>

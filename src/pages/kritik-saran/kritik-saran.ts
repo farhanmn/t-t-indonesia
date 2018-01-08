@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the KritikSaranPage page.
@@ -15,11 +15,33 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class KritikSaranPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad KritikSaranPage');
+  // ionViewDidLoad() {
+  //   console.log('ionViewDidLoad KritikSaranPage');
+  // }
+  showConfirmKritik() {
+    let prompt = this.alertCtrl.create({
+      title: 'Kritik & Saran',
+      message: "Apakah Anda yakin ingin mengirimkan kritik & saran tersebut ?",
+      
+      buttons: [
+        {
+          text: 'Batal',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Kirim',
+          handler: data => {
+            console.log('Saved clicked');
+          }
+        }
+      ]
+    });
+    prompt.present();
   }
 
 }
