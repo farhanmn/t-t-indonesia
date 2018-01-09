@@ -4,6 +4,7 @@ import {AngularFireAuth} from "angularfire2/auth";
 import {LoginPage} from "../login/login";
 import {AngularFireDatabase} from "angularfire2/database";
 import {ChatPage} from "../chat/chat";
+import {JenisakunPage} from "../jenisakun/jenisakun";
 
 @Component({
   selector: 'page-home',
@@ -15,14 +16,7 @@ export class HomePage {
   private user;
 
   constructor(public navCtrl: NavController, private menuCtrl: MenuController, private afAuth: AngularFireAuth, private alertCtrl: AlertController, private afDB: AngularFireDatabase) {
-    afAuth.authState.subscribe(user => {
-      if (!user) {
-        this.navCtrl.setRoot(LoginPage);
-        return;
-      }
-      this.phoneNumber = user.phoneNumber;
-      this.user = user;
-    });
+
   }
 
   ionViewDidEnter() {
@@ -38,24 +32,6 @@ export class HomePage {
 
     // TODO: Wah ini perlu diubah ya
     this.afDB.object('users/'+this.phoneNumber).update(user);
-  }
-
-  signOut() {
-    let prompt = this.alertCtrl.create({
-      title: 'Konfirmasi',
-      message: 'Apakah anda yakin ingin log out?',
-      buttons: [
-        { text: 'Tidak',
-          handler: data => { console.log('Cancel clicked'); }
-        },
-        { text: 'Ya',
-          handler: data => {
-            this.afAuth.auth.signOut();
-          }
-        }
-      ]
-    });
-    prompt.present();
   }
 
 }

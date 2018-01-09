@@ -25,8 +25,10 @@ export class DatapribadiPage {
   pribadiikhwan = PribadiikhwanPage;
   kriteria = KriteriapasanganPage;
   kajian = KajianPage;
+  public userType: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
+    this.userType = navParams.get('userType');
   }
 
   ionViewDidLoad() {

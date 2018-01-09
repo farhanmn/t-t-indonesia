@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {DatapribadiPage} from "../datapribadi/datapribadi";
 
 /**
  * Generated class for the JenisakunPage page.
@@ -20,6 +21,11 @@ export class JenisakunPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad JenisakunPage');
+  }
+
+  goToEditProfilePage(userType) {
+    let param = {userType: userType};
+    this.navCtrl.setRoot(DatapribadiPage, param);
   }
 
 }

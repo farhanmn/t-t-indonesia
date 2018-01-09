@@ -3,6 +3,7 @@ import {AlertController, IonicPage, NavController, NavParams, ViewController} fr
 import * as firebase from "firebase";
 import {AngularFireAuth} from "angularfire2/auth";
 import {AngularFireDatabase} from "angularfire2/database";
+import {JenisakunPage} from "../jenisakun/jenisakun";
 
 /**
  * Generated class for the RecaptchaLoginModalPage page.
@@ -47,11 +48,11 @@ export class RecaptchaLoginModalPage {
                   confirmationResult.confirm(data.confirmationCode)
                     .then(function (result) {
                       // User signed in successfully.
-                      let user = {'no_hp': this.phoneNumber};
+                      let user = {'lastLogin': Date.now()};
 
-                      // TODO: Wah ini perlu diubah ya
-                      this.afDB.list('users/'+this.phoneNumber).push(user);
-                      console.log(result.user);
+                      // Record last login
+                      this.afDB.object('users/'+this.phoneNumber).update(user);
+
                     }).catch(function (error) {
                     // User couldn't sign in (bad verification code?)
                   });

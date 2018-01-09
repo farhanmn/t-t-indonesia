@@ -6,9 +6,6 @@
 -->
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
     <ion-title>Data Pribadi</ion-title>
   </ion-navbar>
 </ion-header>
@@ -24,11 +21,11 @@
         <h2>Keluarga</h2>
         <button ion-button clear item-end [navPush]="keluarga">Edit</button>
       </ion-item>
-      <ion-item>
+      <ion-item *ngIf="userType=='akhwat'">
         <h2>Pribadi Akhwat</h2>
         <button ion-button clear item-end [navPush]="pribadiakhwat">Edit</button>
       </ion-item>
-      <ion-item>
+      <ion-item *ngIf="userType=='ikhwan'">
           <h2>Pribadi Ikhwan</h2>
           <button ion-button clear item-end [navPush]="pribadiikhwan">Edit</button>
         </ion-item>

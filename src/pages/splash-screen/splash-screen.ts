@@ -19,12 +19,6 @@ import {LoginPage} from "../login/login";
 export class SplashScreenPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public afAuth: AngularFireAuth) {
-    afAuth.authState.subscribe(user => {
-      if (!user) {
-        this.navCtrl.setRoot(LoginPage);
-        return;
-      }
-      this.navCtrl.setRoot(HomePage);
-    });
+
   }
 }

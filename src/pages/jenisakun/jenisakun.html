@@ -7,11 +7,7 @@
 <ion-header class="maxwidth">
 
   <ion-navbar>
-
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>jenisakun</ion-title>
+    <ion-title>Registrasi</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -21,15 +17,15 @@
   <p>Saya mendaftar sebagai</p>
   <ion-list>
   <!-- TODO: hidden button sesuai keadaan, hanya ada 2 button yaitu 1 langkah step selanjutnya dan mundur ta'aruf -->
-    <button ion-button full icon-left [navPush]="nadzorPage">
+    <button ion-button full icon-left (click)="goToEditProfilePage('ikhwan')">
       <ion-icon name="home" ></ion-icon>
       Peserta Ikhwan
     </button>
-    <button ion-button full icon-left [navPush]="khitbahPage">
+    <button ion-button full icon-left (click)="goToEditProfilePage('akhwat')">
       <ion-icon name="ios-arrow-dropright-outline"></ion-icon>
       Peserta Akhwat
     </button>
-    <button ion-button full icon-left [navPush]="akadPage">
+    <button ion-button full icon-left (click)="goToEditProfilePage('wali')">
       <ion-icon name="arrow-dropright-circle"></ion-icon>
       Wali
     </button>

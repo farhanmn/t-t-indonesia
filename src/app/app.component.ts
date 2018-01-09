@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import {AlertController, Nav, Platform} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -17,6 +17,9 @@ import { DashboardDuaPage } from '../pages/dashboard-dua/dashboard-dua';
 import { DashboardTigaPage } from '../pages/dashboard-tiga/dashboard-tiga';
 import { JenisakunPage } from '../pages/jenisakun/jenisakun';
 import {KritikSaranPage} from "../pages/kritik-saran/kritik-saran";
+import {AngularFireAuth} from "angularfire2/auth";
+import {AngularFireDatabase} from "angularfire2/database";
+import {LoginPage} from "../pages/login/login";
 
 
 @Component({
@@ -26,10 +29,11 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = SplashScreenPage;
+  phoneNumber: any;
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public afAuth: AngularFireAuth, public afDB: AngularFireDatabase, public alertCtrl: AlertController) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -55,7 +59,21 @@ export class MyApp {
       // { title: 'Chat', component: ChatPage}
     ];
 
+    afAuth.authState.subscribe(user => {
+      if (!user) {
+        this.nav.setRoot(LoginPage);
+      }
 
+      // Cek object user type
+      let itemRef = this.afDB.object('users/'+this.phoneNumber+'/userType');
+      itemRef.snapshotChanges().subscribe(action => {
+        if (action.payload.val() == null) {
+          this.nav.setRoot(JenisakunPage);
+        } else {
+          this.nav.setRoot(HomePage);
+        }
+      });
+    });
   }
 
   initializeApp() {
@@ -71,5 +89,23 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  signOut() {
+    let prompt = this.alertCtrl.create({
+      title: 'Konfirmasi',
+      message: 'Apakah anda yakin ingin log out?',
+      buttons: [
+        { text: 'Tidak',
+          handler: data => { console.log('Cancel clicked'); }
+        },
+        { text: 'Ya',
+          handler: data => {
+            this.afAuth.auth.signOut();
+          }
+        }
+      ]
+    });
+    prompt.present();
   }
 }
